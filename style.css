@@ -1,0 +1,63 @@
+div {
+    text-align: center;
+}
+
+header {
+    background-color: rgb(174, 0, 255);
+    padding: 20px;
+    text-align: center;
+}
+
+body {
+    background: linear-gradient(45deg, yellow, bisque );
+}
+
+.container {
+    margin-top: 30px;
+}
+
+img {
+    width: 300px;
+    height: auto;
+    animation: popInOut 4s infinite;
+}
+
+.grid {
+    display: grid;
+    grid-template-areas: "a b c";
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+    margin: 30px;
+    background-color: blue;
+    border: 3px solid black;
+}
+
+@media (max-width: 700px){
+    .grid {
+        grid-template-areas: 
+        "a"
+        "b"
+        "c";
+        grid-template-columns: 3fr;
+    }
+}
+
+.first {
+    grid-area: a;
+}
+
+.second {
+    grid-area: b;
+}
+
+.third {
+    grid-area: c;
+}
+
+footer {
+    background-color: yellow;
+}
+
+@keyframes popInOut {
+    0%   { transform: scale(0.5); }
+}
